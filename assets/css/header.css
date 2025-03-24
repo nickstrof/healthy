@@ -1,0 +1,87 @@
+.header { 
+    position: sticky;
+    inset: 0 0 auto;
+    z-index: 4;
+    height: var(--header);
+    background-color: var(--black);
+    will-change: background-color, backdrop-filter, box-shadow;
+    transition: background-color .5s ease, backdrop-filter .5s ease box-shadow .5s ease;
+}
+.header.fixed {
+    background-color: color-mix(in srgb, var(--black) 90%, var(--transparent));
+    box-shadow: 0 0 10px color-mix(in srgb, var(--black) 20%, var(--transparent));
+    backdrop-filter: blur(10px);
+}
+.header svg {
+    fill: var(--white);
+    cursor: pointer;
+}
+.header .container {
+    height: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .site {
+    position: absolute;
+    left: 0;
+    max-width: 25vw;
+}
+.header .site svg {
+    max-height: calc(var(--header) - 30px);
+}
+.header .navigation {
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+.header .navigation .desktop-menu,
+.header .navigation .c-mode .sun,
+.header .navigation .c-mode.active .moon,
+.header .navigation .mobile-menu .close,
+.header .navigation .mobile-menu.active .burger {
+    display: none;
+}
+.header .navigation .c-mode.active .sun,
+.header .navigation .mobile-menu.active .close {
+    display: block;
+}
+.header .navigation svg {
+    width: clamp(20px, 3vw, 30px);
+    height: clamp(20px, 3vw, 30px);
+}
+.header .navigation .mobile-menu {
+    margin-left: clamp(1.5rem, 2vw, 2rem);
+}
+@media only screen and (min-width: 768px) {
+    .header .navigation .c-mode {
+        margin-left: clamp(1.5rem, 2vw, 2rem);
+    }
+    .header .navigation .mobile-menu {
+        display: none;
+    }
+    .header .navigation .desktop-menu {
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        font-weight: 500;
+        color: var(--white);
+    
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        gap: 1em;    
+        
+        /* grid-auto-columns: max-content; */
+        /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+        /* justify-content: end; */
+    }
+}
+@media (any-hover: hover) {
+    .header .social svg {
+        will-change: fill;
+        transition: fill .2s ease;
+    }
+    .header .social .share:hover svg {
+        fill: var(--blue);
+    }
+}	
