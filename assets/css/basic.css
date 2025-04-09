@@ -4,7 +4,7 @@
 	:root {
 		--white: #fff;
 		--black: #000;
-		--transparent: rgb(0 0 0 / 0%);	
+		--transparent: rgb(0 0 0 / 0%);
 
 		--pad: clamp(20px, 5vw, 50px);
 		--header: clamp(60px, 10vmin, 80px);
