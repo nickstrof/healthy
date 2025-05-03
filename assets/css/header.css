@@ -3,17 +3,17 @@
     inset: 0 0 auto;
     z-index: 4;
     height: var(--header);
-    background-color: var(--black);
+    background-color: var(--bg);
     will-change: background-color, backdrop-filter, box-shadow;
     transition: background-color .5s ease, backdrop-filter .5s ease box-shadow .5s ease;
 }
 .header.fixed {
-    background-color: color-mix(in srgb, var(--black) 90%, var(--transparent));
-    box-shadow: 0 0 10px color-mix(in srgb, var(--black) 20%, var(--transparent));
+    background-color: color-mix(in srgb, var(--bg) 90%, var(--transparent));
+    box-shadow: 0 0 10px color-mix(in srgb, var(--bg) 20%, var(--transparent));
     backdrop-filter: blur(10px);
 }
 .header svg {
-    fill: var(--white);
+    fill: var(--text-color);
     cursor: pointer;
 }
 .header .container {
@@ -37,14 +37,14 @@
     display: flex;
 }
 .header .navigation .desktop-menu,
-.header .navigation .c-mode .sun,
-.header .navigation .c-mode.active .moon,
-.header .navigation .mobile-menu .close,
-.menu-dropdown.active .header .navigation .mobile-menu .burger {
+.c-mode .sun,
+.light .c-mode .moon,
+.mobile-menu .close,
+.mobile-menu.active .burger {
     display: none;
 }
-.header .navigation .c-mode.active .sun,
-.menu-dropdown.actice .header .navigation .mobile-menu .close {
+.light .c-mode .sun,
+.mobile-menu.active .close {
     display: block;
 }
 .header .navigation svg {
@@ -54,8 +54,6 @@
 .header .navigation .mobile-menu {
     margin-left: clamp(1.5rem, 2vw, 2rem);
 }
-
-
 
 .black-modal.active {
     z-index: 3;
@@ -71,7 +69,7 @@
     position: fixed;
     inset: var(--header) 0 auto;
     z-index: 4;
-    background: var(--white);
+    background: var(--bg);
     opacity: .9;
     padding: var(--header) .5em 2em;
     text-align: center;
@@ -84,10 +82,12 @@
     box-shadow: 0 0 10px rgb(0 0 0 / .3);
 }
 .menu-dropdown a {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
     padding: .5em 1em;
-    color: var(--black);
-    transform: none;
-    box-shadow: 0 0 10px rgb(0 0 0 / .3);
 }
 @media only screen and (min-width: 768px) {
     .header .navigation .c-mode {
@@ -99,7 +99,7 @@
     .header .navigation .desktop-menu {
         font-size: clamp(1rem, 3vw, 1.25rem);
         font-weight: 500;
-        color: var(--white);
+        color: var(--text-color);
     
         display: grid;
         grid-auto-flow: column;
@@ -112,11 +112,22 @@
     }
 }
 @media (any-hover: hover) {
-    .header .social svg {
+    .header svg {
         will-change: fill;
         transition: fill .2s ease;
     }
-    .header .social .share:hover svg {
-        fill: var(--blue);
+    .header svg:hover {
+        fill: var(--accent-color);
+    }
+    .menu-dropdown a,
+    .header .navigation .desktop-menu .item {
+        will-change: color;
+        transition: color .2s ease;
+    }
+    .menu-dropdown a:hover {
+        color: var(--accent-color);
+    }
+    .header .navigation .desktop-menu .item:hover {
+        color: var(--accent-color);
     }
 }	
