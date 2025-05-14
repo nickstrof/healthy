@@ -1,0 +1,7 @@
+.hero .inner {
+    width: 90%;
+    margin-inline: auto;
+    border-bottom-right-radius: 4em;
+    border-bottom-left-radius: 4em;
+    overflow: hidden;
+}

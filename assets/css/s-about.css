@@ -1,0 +1,36 @@
+.section-about .about .container .inner .cols {
+    display: grid;
+    gap: 2em;
+}
+.section-about .about .container .inner .cols .col.col-l .wrapper {
+    border-radius: 2em;
+    overflow: hidden;
+}
+.section-about .about .container .inner .cols .col.col-r .info {
+    text-align: center;
+}
+.section-about .about .container .inner .cols .col.col-r .info h2 {
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-block: 0;
+    color: var(--accent-color);
+}
+.section-about .about .container .inner .cols .col.col-r .info .wrapper-more {
+    margin-block: 2em;
+}
+.section-about .about .container .inner .cols .col.col-r .info a {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    margin-top: 1em;
+    padding: .5em 2em;
+    color: var(--bg);
+    background-color: var(--accent-color);
+    border-radius: 4em;
+}
+@media only screen and (min-width: 768px) {
+    .section-about .about .container .inner .cols {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}

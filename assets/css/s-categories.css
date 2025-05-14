@@ -1,0 +1,104 @@
+.section-categories .categories {
+    margin-top: min(150px, 15vw);
+}
+.section-categories .categories .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.section-categories .categories .container .category {
+    width: 100%;
+    max-width: 400px;
+    margin: 2em auto;
+    overflow: hidden;
+}
+.section-categories .categories .container .category .image {
+    aspect-ratio: 1;
+    display: block;
+    height: 100%;
+    border-radius: 2em;
+    overflow: hidden;
+}
+.section-categories .categories .container .category .image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color-mix(in srgb, var(--bg) 50%, rgb(0 0 0 / 0%));
+}
+.section-categories .categories .container .category .image .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-categories .categories .container .category .info {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-categories .categories .container .category .info .title {
+    font-size: clamp(1.5rem, 4vw, 2.125rem);
+    line-height: 1.1;
+    margin-top: 1em;
+    text-align: center;
+}
+.section-categories .bg-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: -1;
+    pointer-events: none;
+}
+.section-categories .bg-svg svg {
+    width: 100%;
+    height: 100%;
+}
+.section-categories .bg-svg svg .st0,
+.section-categories .bg-svg svg .st1 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 0.2s ease-out;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.section-categories .bg-svg svg .st0 {
+    stroke: var(--green1);
+    stroke-width: 26px;
+}
+.section-categories .bg-svg svg .st1 {
+    stroke: var(--green3);
+    stroke-width: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    .section-categories .categories .container .category {
+        width: clamp(280px, 80vw, 400px);
+        align-self: flex-start;
+        padding-left: var(--pad);
+        margin: 2em 0;
+    }
+    .section-categories .categories .container .category.reverse {
+        align-self: flex-end;
+        padding-right: var(--pad);
+    }
+    .section-categories .categories .container .category.center {
+        align-self: center;
+        padding-left: 0;
+    }
+    .section-categories .categories .container .category .image {
+        width: 100%;
+        max-width: 449px;
+        margin-left: auto;
+        aspect-ratio: 449 / 371;
+    }
+    .section-categories .categories .container .category.center .image {
+        max-width: 600px;
+        aspect-ratio: 600 / 1067;
+    }
+}

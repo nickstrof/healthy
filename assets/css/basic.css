@@ -35,11 +35,11 @@
         border-radius: .5rem;
     }
     ::-moz-selection {
-        color: var(--white);
+        color: var(--bg);
         background-color: var(--reverse-bg);
     }
     ::selection {
-        color: var(--white);
+        color: var(--bg);
         background-color: var(--reverse-bg);
     }
 
@@ -54,10 +54,6 @@
         -webkit-tap-highlight-color: transparent;
 		-webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-
-
-        /* test */
-        height: 2000px;
 	}
 	div {
 		position: relative;
@@ -80,4 +76,27 @@
 	.container {
 		width: var(--container);
 		margin-inline: auto;
+	}
+	main {
+		overflow: hidden;
+	}
+
+	.wrapper-title {
+		text-align: center;
+		margin-block: 2.5em;
+	}
+	.wrapper-title .title {
+		font-size: clamp(1.5rem,4.5vw,2.125rem);
+		font-weight: 600;
+		margin-block: .25em;
+		line-height: 1;
+		color: var(--reverse-bg);
+	}
+	.wrapper-title .title span{
+		font-weight: 900;
+		color: var(--accent-color);
+	}
+	.wrapper-title .subtitle{
+		color: var(--text-color);
+		font-weight: 300;
 	}

@@ -1,4 +1,4 @@
-.header { 
+header { 
     position: sticky;
     inset: 0 0 auto;
     z-index: 4;
@@ -7,36 +7,36 @@
     will-change: background-color, backdrop-filter, box-shadow;
     transition: background-color .5s ease, backdrop-filter .5s ease box-shadow .5s ease;
 }
-.header.fixed {
+header.fixed {
     background-color: color-mix(in srgb, var(--bg) 90%, var(--transparent));
     box-shadow: 0 0 10px color-mix(in srgb, var(--bg) 20%, var(--transparent));
     backdrop-filter: blur(10px);
 }
-.header svg {
+header svg {
     fill: var(--text-color);
     cursor: pointer;
 }
-.header .container {
+header .container {
     height: 100%;
     max-width: var(--container);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.header .site {
+header .site {
     position: absolute;
     left: 0;
     max-width: 25vw;
 }
-.header .site svg {
+header .site svg {
     max-height: calc(var(--header) - 30px);
 }
-.header .navigation {
+header .navigation {
     position: absolute;
     right: 0;
     display: flex;
 }
-.header .navigation .desktop-menu,
+header .navigation .desktop-menu,
 .c-mode .sun,
 .light .c-mode .moon,
 .mobile-menu .close,
@@ -47,11 +47,11 @@
 .mobile-menu.active .close {
     display: block;
 }
-.header .navigation svg {
+header .navigation svg {
     width: clamp(20px, 3vw, 30px);
     height: clamp(20px, 3vw, 30px);
 }
-.header .navigation .mobile-menu {
+header .navigation .mobile-menu {
     margin-left: clamp(1.5rem, 2vw, 2rem);
 }
 
@@ -90,13 +90,13 @@
     padding: .5em 1em;
 }
 @media only screen and (min-width: 768px) {
-    .header .navigation .c-mode {
+    header .navigation .c-mode {
         margin-left: clamp(1.5rem, 2vw, 2rem);
     }
-    .header .navigation .mobile-menu {
+    header .navigation .mobile-menu {
         display: none;
     }
-    .header .navigation .desktop-menu {
+    header .navigation .desktop-menu {
         font-size: clamp(1rem, 3vw, 1.25rem);
         font-weight: 500;
         color: var(--text-color);
@@ -112,22 +112,22 @@
     }
 }
 @media (any-hover: hover) {
-    .header svg {
+    header svg {
         will-change: fill;
         transition: fill .2s ease;
     }
-    .header svg:hover {
+    header svg:hover {
         fill: var(--accent-color);
     }
     .menu-dropdown a,
-    .header .navigation .desktop-menu .item {
+    header .navigation .desktop-menu .item {
         will-change: color;
         transition: color .2s ease;
     }
     .menu-dropdown a:hover {
         color: var(--accent-color);
     }
-    .header .navigation .desktop-menu .item:hover {
+    header .navigation .desktop-menu .item:hover {
         color: var(--accent-color);
     }
 }	

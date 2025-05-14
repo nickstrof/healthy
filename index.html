@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Project | Landing Page</title>
+    <title>Healthy Project | Home Page</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/basic.css">
     <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/s-hero.css">
+    <link rel="stylesheet" href="./assets/css/s-categories.css">
+    <link rel="stylesheet" href="./assets/css/s-about.css">
 </head>
 <body>
-	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <symbol id="hashtag" viewBox="0 0 24 24">
                 <path d="M7.78428 14L8.2047 10H4V8H8.41491L8.94043 3H10.9514L10.4259 8H14.4149L14.9404 3H16.9514L16.4259 8H20V10H16.2157L15.7953 14H20V16H15.5851L15.0596 21H13.0486L13.5741 16H9.58509L9.05957 21H7.04855L7.57407 16H4V14H7.78428ZM9.7953 14H13.7843L14.2047 10H10.2157L9.7953 14Z"></path>
@@ -20,8 +26,7 @@
                 <path d="M1,5h30v2H1V5z M1,15h30v2H1V15z M1,25h15v2H1V25z"></path>
             </symbol>
             <symbol id="close" viewBox="0 0 30 30">
-                <path d="M15,16.436L1.436,30L0,28.562L13.563,15L0,1.436L1.436,0L15,13.564L28.562,0L30,1.436
-                        L16.436,15L30,28.562L28.562,30L15,16.436z"></path>
+                <path d="M15,16.436L1.436,30L0,28.562L13.563,15L0,1.436L1.436,0L15,13.564L28.562,0L30,1.436 L16.436,15L30,28.562L28.562,30L15,16.436z"></path>
             </symbol>
             <!-- Color Mode -->
             <symbol id="sun" viewBox="0 0 24 24">
@@ -34,19 +39,21 @@
     </svg>
 
     <!-- Menu Dropdown -->
-     <div class="black-modal"></div>
-     <div class="menu-dropdown">
+    <div class="black-modal"></div>
+    <div class="menu-dropdown">
         <a href="./index.html">Home</a>
         <a href="./pages/about.html">About</a>
-     </div>
+    </div>
 
     <!-- Header -->
-    <div class="header pad">
+    <header class="pad">
         <div class="container">
             <a class="site" href="./index.html" title="Healthy Project">
-                <svg width="40" height="40"><use href="#hashtag"></use></svg>
+                <svg width="40" height="40">
+                    <use href="#hashtag"></use>
+                </svg>
             </a>
-    
+
             <div class="navigation">
                 <div class="desktop-menu">
                     <a class="item" href="./index.html">Home</a>
@@ -54,32 +61,128 @@
                 </div>
 
                 <div class="c-mode">
-                    <svg class="sun" width="30" height="30"><use href="#sun"></use></svg>
-                    <svg class="moon" width="30" height="30"><use href="#moon"></use></svg>        
+                    <svg class="sun" width="30" height="30">
+                        <use href="#sun"></use>
+                    </svg>
+                    <svg class="moon" width="30" height="30">
+                        <use href="#moon"></use>
+                    </svg>
                 </div>
 
                 <div class="mobile-menu" id="menu-toggle">
-                    <svg class="burger" width="30" height="30"><use href="#burger"></use></svg>
-                    <svg class="close" width="30" height="30"><use href="#close"></use></svg>        
+                    <svg class="burger" width="30" height="30">
+                        <use href="#burger"></use>
+                    </svg>
+                    <svg class="close" width="30" height="30">
+                        <use href="#close"></use>
+                    </svg>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- Main -->
-    <div class="main">
-        <div class="hero">
-            
+    <main>
+        <section class="hero">
+            <div class="inner">
+                <img src="./assets/img/nutrition-3.jpg" alt="">
+            </div>
+        </section>
+
+        <div id="content">
+            <section class="section-categories">
+                <div class="bg-svg">
+                    <svg id="myPath" viewBox="0 0 1488.57 3348.9" preserveAspectRatio="xMinYMid meet" width="100%">
+                        <path class="st1" d="M-27.5,1.35S336.94,93.52,491.1,237.66c154.16,144.13,110.11,273.86,389.85,311.4,279.73,37.54,452.38,34.52,517.93,159.01,42.57,80.86,41.38,136.12-58.16,192.14-99.54,56.02-355.6,70.12-490.23,111.89-153.85,47.74-296.76,143.76-315.68,228.9-13.84,75.09,89.87,63.07,70.95,141.9-12.24,51.01-32.48,123.58,6.31,176.58,38.77,53,66.71,144.64,368.6,135.8,301.9-8.84,413.03,57.38,446.66,147.89,33.64,90.51,16.3,250.32-399.15,312.16-415.45,61.84-468.69,229.63-449.3,284.84,19.39,55.22,52.01,90.28,87.63,121.91,92.69,82.3,130.67,181.35,100.44,280.08-27.58,90.11-153.89,143.05-79.47,282.41,55.93,104.74,27.72,130.93,7.57,181.3" />
+                        <path class="st0" d="M-44.07,30.86S237.01,125.32,311.87,164.96c74.86,39.65,234.65,104.9,329.63,171.71,147.89,104.03,116.66,203.56,225.6,265.4,108.94,61.84,300.27-18.93,466.45,26.71,166.18,45.64,140.16,218.92,95.04,260.61-45.12,41.69-74.04,69-199.59,71.94-125.56,2.95-251.12-17.67-345.28-2.95-94.17,14.73-221.64,85.75-264.04,170.79-40.83,81.89-75.76,220.62-14.77,312.14,77.55,111.9,204.95,282.69,428.37,295.94,223.42,13.25,403.41-61.51,436.67,146.03,31.33,195.52-367.32,205.79-504.23,236.73-110.16,24.89-450.76,95.85-371.75,248.65,85.42,165.19,156.86,223.66,144.77,378.82-10.82,138.85-97.87,220.86-31.9,313.81,34.49,48.6,40.09,93.24-13.8,145.88-66.11,64.57-56.53,87.73-54.68,108.34" />
+                    </svg>
+                </div>
+
+                <div class="categories pad">
+                    <div class="wrapper-title">
+                        <h2 class="title">HEALTHY <span>CATEGORIES</span></h2>
+                        <div class="subtitle">“Explore a variety of topics to enhance your physical, mental, and nutritional well-being.”</div>
+                    </div>
+                    <div class="container">
+                        <div class="category i-img">
+                            <div class="category-inner">
+                                <div class="info">
+                                    <h2 class="title">Fitness</h2>
+                                </div>
+                                <div class="image">
+                                    <img class="img" src="./assets/img/fitness-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category i-img reverse">
+                            <div class="category-inner">
+                                <div class="info">
+                                    <h2 class="title">Nutrition</h2>
+                                </div>
+                                <div class="image">
+                                    <img class="img" src="./assets/img/nutrition-8.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category i-img">
+                            <div class="category-inner">
+                                <div class="info">
+                                    <h2 class="title">Mental Wellness</h2>
+                                </div>
+                                <div class="image">
+                                    <img class="img" src="./assets/img/mental-wellness-4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category i-img center">
+                            <div class="category-inner">
+                                <div class="info">
+                                    <h2 class="title">Lets Go</h2>
+                                </div>
+                                <div class="image">
+                                    <img class="img" src="./assets/img/nutrition-10.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-about">
+                <div class="about pad">
+                    <div class="wrapper-title">
+                        <h2 class="title">HEALTHY <span>ABOUT</span></h2>
+                        <div class="subtitle">“Empowering you to live a balanced and healthy life through fitness, mindful nutrition, and mental wellness.”</div>
+                    </div>
+                    <div class="container">
+                        <div class="inner">
+                            <div class="cols">
+                                <div class="col col-l">
+                                    <div class="wrapper">
+                                        <img src="./assets/img/nutrition-11.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col col-r">
+                                    <div class="info">
+                                        <h2>Are you Ready?</h2>
+                                        <div class="wrapper-more"><a href="./pages/about.html">Lets Go!</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-
-    </div>
+    </main>
 
     <!-- Footer -->
-     <div class="footer"></div>
+    <footer>
+        <div class="copyright">©2025 <a href="/" target="_blank" title="">Healthy</a></div>
+    </footer>
 
-     
-     <!-- Scripts -->
-     <script src="./assets/js/main.js"></script>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

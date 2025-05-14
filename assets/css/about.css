@@ -1,0 +1,20 @@
+.wrapper {
+    border-bottom-right-radius: 2em;
+    overflow: hidden;
+    border-bottom-left-radius: 2em;
+}
+.section-about .about .container .info h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    color: var(--accent-color);
+}
+.section-about .about .container .info p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+}
+@media only screen and (min-width: 768px) {
+    .section-about .about .container .info p {
+        text-align: justify;
+    }
+}
